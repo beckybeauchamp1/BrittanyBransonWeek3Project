@@ -1,0 +1,60 @@
+body {
+  background-image: url(./images/canvas.jpg);
+}
+
+h1 {
+  font-family: "Vtks Pedra Bruta";
+  text-align: center;
+  font-size: 70px;
+  color: pink;
+  text-shadow: 2px 2px black;
+}
+#memory_board {
+  background-image: url(./images/canvas.jpg);
+  /*opacity: 0.2;*/
+  color: white;
+  border: #999 1px solid;
+  width: 900px;
+  height: 740px;
+  padding: 24px;
+  margin: 0px auto;
+}
+
+.card{
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #bbb;
+  border-top: 1px solid #ddd;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  width: 150px;
+  height: 170px;
+  float: left;
+  margin: 10px;
+  padding: 20px;
+  font-size: 64px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+}
+
+.card_back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: ridge 7px #542C06;
+
+}
+
+.card_front {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: white;
+  border: pink 7px solid
+}
