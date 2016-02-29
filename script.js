@@ -1,3 +1,5 @@
+// Nice! Awesome job creating an array of objects.
+
 var faces_array = [
   starryNight = {
     title: "Starry Night",
@@ -26,7 +28,9 @@ var faces_array = [
 ];
 
 function shuffle(array)
+// watch out for indentation here, it should be indented to the right.
 {
+  // i don't really understand what this below. Also where is it being called?
   var m = array.length, t, i;
   while (m > 0)
   {
@@ -40,6 +44,9 @@ function shuffle(array)
 
 function createCard(cardIndex, card) {
   var cardElement = document.createElement("div"); //create an element
+
+  // I don't think you need to separate "divs" for one card. You could fake a front and back
+
   var front = document.createElement("div"); //creates a new div that will become the front
   var back = document.createElement("div"); //creates a new div that will become back
   cardElement.appendChild(front); //adding the front to the cardElement
@@ -52,6 +59,8 @@ function createCard(cardIndex, card) {
     back.style.background = "url('"+ card.image +"')";
 }
 
+// I might place my global variables at the top of the script.js. It's not necesary but helps for reading your code
+
 var cards = document.getElementsByClassName("card");
 
 function addEventListener() {
@@ -59,6 +68,10 @@ function addEventListener() {
     cards[i].addEventListener("click", flipCard); //going through each card and adding a click event
   }
 }
+
+// I am not familiar with .concat, but I don't understand the point necessarily to do this and the
+// shuffle function below
+
 var card_set = faces_array.concat(faces_array); //setting up a blank array
 console.log("card_set ct", card_set.length)
 console.log("card_set", card_set); //the card_set without quotes will produce, instead of a string of information, directly the card_set
