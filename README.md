@@ -13,6 +13,8 @@ My next step for this project is to code an if/else function that would compare 
 USER STORIES
 
 To play this game, a user must be able to:
+<!-- Great job with the planning! I know we didn't go over user stories before in class but this is an example of the format I use:
+As a <type of user>, I want <some goal> so that <some reason>.   -->
 
 -Render the complete memory board in his/her browser. This is intended to look like an artist's canvas with "mini-paintings" acting as the cards in the game. These cards, however, are blank. An image of a famous painting is hidden beneath.
 -A user is notified that he/she must match all of the cards within x amount of guesses. This counter would countdown from x to 0 every time the user clicks a card on the page.

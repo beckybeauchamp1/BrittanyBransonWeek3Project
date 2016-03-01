@@ -30,9 +30,11 @@ var faces_array = [
 function shuffle(array)
 // watch out for indentation here, it should be indented to the right.
 {
-  // i don't really understand what this below. Also where is it being called?
+  // what does m represent?
+  // Also, what is t and i?
   var m = array.length, t, i;
   while (m > 0)
+  // watch out for indentation
   {
 	i = Math.floor(Math.random() * m--);
 	t = array[m];
@@ -46,12 +48,28 @@ function createCard(cardIndex, card) {
   var cardElement = document.createElement("div"); //create an element
 
   // I don't think you need to separate "divs" for one card. You could fake a front and back
+  // Also, I would abstract this into a separate function, for example I might:
+
+//   function createDivs(){
+//     var front = document.createElement("div"); //creates a new div that will become the front
+//     var back = document.createElement("div"); //creates a new div that will become back
+//     cardElement.appendChild(front); //adding the front to the cardElement
+//     cardElement.appendChild(back);//adding the back to the cardElement
+//     document.getElementById("memory_board").appendChild(cardElement); //append the element to the memory board
+//     cardElement.setAttribute("id", cardIndex);
+//     cardElement.classList.add("card");//adding a class to cardElement
+//     front.classList.add("card_front");//adding a class to the front
+//     back.classList.add("card_back");//adding a class to the back
+//     back.style.background = "url('"+ card.image +"')";
+//
+// }
 
   var front = document.createElement("div"); //creates a new div that will become the front
   var back = document.createElement("div"); //creates a new div that will become back
   cardElement.appendChild(front); //adding the front to the cardElement
   cardElement.appendChild(back);//adding the back to the cardElement
   document.getElementById("memory_board").appendChild(cardElement); //append the element to the memory board
+// watch out for indentation here:
     cardElement.setAttribute("id", cardIndex);
     cardElement.classList.add("card");//adding a class to cardElement
     front.classList.add("card_front");//adding a class to the front
